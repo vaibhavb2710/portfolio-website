@@ -1,0 +1,13 @@
+{
+  "name": "vaibhav-portfolio-frontend",
+  "version": "1.0.0",
+  "description": "Vaibhav Bedre Portfolio Frontend",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "dev": "npx live-server --port=3000 --open=index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.3"
+  }
+}
