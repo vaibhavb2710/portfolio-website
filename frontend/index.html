@@ -529,7 +529,7 @@ const form=document.getElementById('contactForm'),sb=document.getElementById('sb
 form.addEventListener('submit',async e=>{
   e.preventDefault();sb.disabled=true;bt.textContent='Sending\u2026';fm.className='fn';
   try{
-    const r=await fetch('http://localhost:5000/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:form.name.value,email:form.email.value,message:(form.subject.value?'['+form.subject.value+'] ':'')+form.message.value})});
+    const r=await fetch('https://portfolio-website-3a7p.onrender.com/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:form.name.value,email:form.email.value,message:(form.subject.value?'['+form.subject.value+'] ':'')+form.message.value})});
     const d=await r.json();
     if(r.ok){fm.textContent='\u2713 Message sent! I\u2019ll reply within 24 hours.';fm.className='fn ok';form.reset();}
     else throw new Error(d.error||'Failed');
