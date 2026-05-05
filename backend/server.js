@@ -1,3 +1,4 @@
+
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -51,6 +52,7 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).json({ error: 'Failed to send message. Please try again.' });
   }
 });
+
 
 // Projects data
 app.get('/api/projects', (req, res) => {
